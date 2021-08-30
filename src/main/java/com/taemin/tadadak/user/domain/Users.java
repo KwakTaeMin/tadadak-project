@@ -16,6 +16,14 @@ public class Users {
 		this.users.add(user);
 	}
 
+	public void remove(User user) {
+		this.users.remove(user);
+	}
+
+	public boolean isContain(User user) {
+		return this.users.contains(user);
+	}
+
 	public int count() {
 		return this.users.size();
 	}

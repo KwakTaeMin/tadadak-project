@@ -6,6 +6,9 @@ public class NickName {
 
 	private String nickName;
 
+	private static final int MIN_NICKNAME_SIZE = 1;
+	private static final int MAX_NICKNAME_SIZE = 16;
+
 	public NickName(String nickName) {
 		validate(nickName);
 		this.nickName = nickName;
@@ -16,8 +19,8 @@ public class NickName {
 	}
 
 	private void validate(String nickName) {
-		if (nickName.length() <= 0 || nickName.length() > 16) {
-			throw new NickNameException("닉네임은 글자는 0보다 크고 16보다 작아야합니다.");
+		if (nickName.length() < MIN_NICKNAME_SIZE || nickName.length() > MAX_NICKNAME_SIZE) {
+			throw new NickNameException();
 		}
 	}
 }

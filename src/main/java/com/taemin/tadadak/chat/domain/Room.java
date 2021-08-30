@@ -5,27 +5,26 @@ import java.time.LocalDateTime;
 import com.taemin.tadadak.user.domain.User;
 
 public class Room {
+
 	private Long id;
-	private String title;
+	private RoomTitle title;
 	private User boss;
+	private RoomUsers roomUsers;
 	private LocalDateTime createDate;
 
-	public Room(String title, User boss) {
+	public Room(RoomTitle title, User boss) {
 		this.title = title;
 		this.boss = boss;
 		this.createDate = LocalDateTime.now();
+		this.roomUsers = new RoomUsers(boss);
 	}
 
-	public Room(long id, String title, User boss) {
+	public Room(Long id, RoomTitle title, User boss) {
 		this(title, boss);
 		this.id = id;
 	}
 
-	public Long getId() {
-		return id;
-	}
-
-	public String getTitle() {
+	public RoomTitle getTitle() {
 		return title;
 	}
 

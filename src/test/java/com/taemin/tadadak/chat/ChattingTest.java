@@ -33,5 +33,6 @@ public class ChattingTest {
 		assertThat(chatting.getContents().value()).isEqualTo("내용");
 		assertThat(chatting.getRoom()).isEqualTo(room);
 		assertThat(chatting.getUser()).isEqualTo(user);
+		assertThat(chatting.getCreateDate()).isNotNull();
 	}
 }

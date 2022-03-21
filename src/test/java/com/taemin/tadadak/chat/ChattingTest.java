@@ -2,6 +2,7 @@ package com.taemin.tadadak.chat;
 
 import static org.assertj.core.api.Assertions.*;
 
+import com.taemin.tadadak.user.domain.Role;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -21,7 +22,7 @@ public class ChattingTest {
 	void setUp() {
 		NickName nickName = new NickName("niKe");
 		RoomTitle roomTitle = new RoomTitle("title");
-		user = new User(1L, "authenticationCode", nickName);
+		User person1 = new User(1L, "taemin@naver.com", nickName, Role.USER, "picture");
 		room = new Room(1L, roomTitle, user);
 	}
 

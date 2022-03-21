@@ -2,6 +2,7 @@ package com.taemin.tadadak.chat;
 
 import static org.assertj.core.api.Assertions.*;
 
+import com.taemin.tadadak.user.domain.Role;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +18,7 @@ public class RoomTest {
 	@BeforeEach
 	void setUp() {
 		NickName nickName = new NickName("niKe");
-		boss = new User(1L, "authenticationCode", nickName);
+		boss = new User(1L, "taemin@naver.com", nickName, Role.USER, "picture");
 	}
 
 	@Test
@@ -38,7 +39,7 @@ public class RoomTest {
 		Room room = new Room(1L, roomTitle, boss);
 
 		NickName nickName = new NickName("person");
-		User person = new User(2L, "authenticationCode", nickName);
+		User person = new User(2L, "taemin@naver.com", nickName, Role.USER, "picture");
 		room.enter(person);
 
 		assertThat(room.getRoomUsers().count()).isEqualTo(2);
@@ -50,14 +51,14 @@ public class RoomTest {
 		Room room = new Room(1L, roomTitle, boss);
 
 		NickName nickName = new NickName("person");
-		User person1 = new User(2L, "authenticationCode", nickName);
-		User person2 = new User(3L, "authenticationCode", nickName);
-		User person3 = new User(4L, "authenticationCode", nickName);
-		User person4 = new User(5L, "authenticationCode", nickName);
-		User person5 = new User(6L, "authenticationCode", nickName);
-		User person6 = new User(7L, "authenticationCode", nickName);
-		User person7 = new User(8L, "authenticationCode", nickName);
-		User person8 = new User(9L, "authenticationCode", nickName);
+		User person1 = new User(2L, "taemin@naver.com", nickName, Role.USER, "picture");
+		User person2 = new User(3L, "taemin@naver.com", nickName, Role.USER, "picture");
+		User person3 = new User(4L, "taemin@naver.com", nickName, Role.USER, "picture");
+		User person4 = new User(5L, "taemin@naver.com", nickName, Role.USER, "picture");
+		User person5 = new User(6L, "taemin@naver.com", nickName, Role.USER, "picture");
+		User person6 = new User(7L, "taemin@naver.com", nickName, Role.USER, "picture");
+		User person7 = new User(8L, "taemin@naver.com", nickName, Role.USER, "picture");
+		User person8 = new User(9L, "taemin@naver.com", nickName, Role.USER, "picture");
 		room.enter(person1);
 		room.enter(person2);
 		room.enter(person3);
@@ -78,8 +79,8 @@ public class RoomTest {
 		Room room = new Room(1L, roomTitle, boss);
 
 		NickName nickName = new NickName("person");
-		User person1 = new User(2L, "authenticationCode", nickName);
-		User person2 = new User(3L, "authenticationCode", nickName);
+		User person1 = new User(2L, "taemin@naver.com", nickName, Role.USER, "picture");
+		User person2 = new User(3L, "taemin@naver.com", nickName, Role.USER, "picture");
 		room.enter(person1);
 		room.enter(person2);
 

@@ -8,9 +8,11 @@ interface GoogleButtonProps {
 
 const GoogleLoginButton: React.FC<GoogleButtonProps> = (props) => {
 
+  const googleLoginUrl = "http://localhost:8080/login/oauth2/code/google";
   const { children, onClick } = props; // props 객체
   return (
-      <Button 
+      <Button
+      href={googleLoginUrl}
       type="primary"
       onClick = {props.onClick}>
           {children}

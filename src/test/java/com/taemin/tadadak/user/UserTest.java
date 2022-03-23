@@ -26,6 +26,6 @@ public class UserTest {
 		assertThat(user.getId()).isEqualTo(1L);
 		assertThat(user.getEmail()).isEqualTo("authenticationCode");
 		assertThat(user.getNickName().value()).isEqualTo("niKe");
-		assertThat(user.getCreateDate()).isNotNull();
+		assertThat(user.getCreateAt()).isNotNull();
 	}
 }

@@ -5,6 +5,7 @@ import lombok.Getter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -25,7 +26,10 @@ public class User {
     private String picture;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime createDate;
+    private Date createAt;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date updateAt;
 
     protected User() {
     }
@@ -36,8 +40,6 @@ public class User {
         this.nickName = nickName;
         this.role = role;
         this.picture = picture;
-
-        this.createDate = LocalDateTime.now();
     }
 
     @Builder

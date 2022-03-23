@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    include: oauth
+  datasource:
+    url: jdbc:mariadb://localhost:3309/tadadak_db
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: root
+  jpa:
+    open-in-view: false
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database: mysql

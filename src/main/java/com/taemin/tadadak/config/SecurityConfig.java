@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .logout()
-                .logoutSuccessUrl("http://localhost:3000/")
+                .logoutSuccessUrl("/loginSuccess")
                 .and()
                 .oauth2Login()
                 .userInfoEndpoint()

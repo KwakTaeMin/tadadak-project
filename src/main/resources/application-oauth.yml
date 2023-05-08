@@ -7,3 +7,7 @@ spring:
             client-id: 1038697467079-kf6aibabre2sr9uqgbioucpaob1fl08m.apps.googleusercontent.com
             client-secret: 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
             scope: profile,email
+
+app:
+  oauth2:
+    authorized-redirect-uris: http://localhost:3000/oauth2/redirect
